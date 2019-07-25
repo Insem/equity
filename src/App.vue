@@ -17,6 +17,7 @@
     </v-toolbar>
 
     <v-content>
+      XUY
       <modal></modal>
         <router-view/>
     </v-content>
