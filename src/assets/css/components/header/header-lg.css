@@ -1,0 +1,58 @@
+.header_main {
+    display: flex;
+    justify-content: start;
+    background-color: #1A65AE;
+    height: 70px;
+}
+
+header .logo {
+    height: 100%;
+    width: 380px;
+}
+
+header .nav {
+    display: flex;
+    align-items: center;
+}
+
+header a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+header .nav a {
+    margin-right: 30px;
+}
+
+header .nav a:last-child {
+    margin-right: 0px;
+}
+
+header .login {
+    margin-left: auto;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+}
+
+header .login a:first-child {
+    margin-left: 0px !important;
+}
+
+header .login a,
+header .login {
+    font-size: 16px !important;
+}
+
+header .login a {
+    margin: 0px 10px;
+}
+
+.blue_line {
+    background-color: #19365f;
+    height: 20px;
+}

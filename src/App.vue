@@ -1,42 +1,24 @@
 <template>
-  <v-app>
-    <v-toolbar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn
-        flat
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-      >
-        <span class="mr-2">Latest Refvdbgfbfgbfglease</span>
-      </v-btn>
-      <router-link to="/about">About</router-link>
-    </v-toolbar>
-
-    <v-content>
-    
-      <modal></modal>
-        <router-view/>
-    </v-content>
-  </v-app>
+  <div id="app">
+    <app-header></app-header>
+    <!--<router-link to="/about">About</router-link>-->
+    <router-view />
+  </div>
 </template>
-
+<style>
+@import "./assets/css/main/main-lg.css";
+</style>
 <script>
-import HelloWorld from './components/HelloWorld'
-import modal from './components/modal'
-
+import appHeader from "./components/header";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    modal
+    appHeader
   },
-  data () {
+  data() {
     return {
       //
-    }
+    };
   }
-}
+};
 </script>
