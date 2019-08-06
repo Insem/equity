@@ -21,6 +21,7 @@
         </div>
       </div>
     </div>
+    <slider></slider>
   </div>
 </template>
 <style>
@@ -120,3 +121,11 @@
   text-decoration: underline;
 }
 </style>
+<script>
+import slider from "../components/slider";
+export default {
+  components: {
+    slider
+  }
+};
+</script>
