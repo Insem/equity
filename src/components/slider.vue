@@ -6,13 +6,12 @@
           :paginationColor="'#5e7d9b'"
           :paginationActiveColor="'#fff'"
           :navigationEnabled="true"
-          :navigationPrevLabel="arrowL()"
-          :navigationNextLabel="arrowR()"
+          :navigationPrevLabel="angleLeft"
+          :navigationNextLabel="angleRight"
         >
           <slide>
             <div class="slider_block">
-              <div class="slider_image">
-                <peopleIcon />
+              <div v-html="peopleIcon" class="slider_image">
               </div>
               <div class="slider_text">
                 <div class="slider_title">Заголовок преимущества</div>
@@ -26,8 +25,7 @@
           </slide>
           <slide>
             <div class="slider_block">
-              <div class="slider_image">
-                <vkIcon />
+              <div v-html="vkIcon" class="slider_image">
               </div>
               <div class="slider_text">
                 <div class="slider_title">Заголовок преимущества</div>
@@ -41,8 +39,7 @@
           </slide>
           <slide>
             <div class="slider_block">
-              <div class="slider_image">
-                <peopleIcon />
+              <div v-html="peopleIcon" class="slider_image">
               </div>
               <div class="slider_text">
                 <div class="slider_title">Заголовок преимущества</div>
@@ -61,6 +58,9 @@
 </template>
 <style>
 @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+.VueCarousel-navigation button{
+  width: 50px;
+}
 .slider {
   background-color: #003061;
   padding: 0 60px;
@@ -112,24 +112,29 @@ label {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.slider_image svg{
+  width: 100%;
+}
 </style>
 <script>
 import { Carousel, Slide } from "vue-carousel";
 import peopleIcon from "../assets/img/svg/people.svg";
 import vkIcon from "../assets/img/svg/vk.svg";
+import angleRight from "../assets/img/svg/angle-right.svg";
+import angleLeft from "../assets/img/svg/angle-left.svg";
+
+console.log(peopleIcon);
 export default {
   components: {
     Carousel,
-    peopleIcon,
-    vkIcon,
     Slide
   },
   data() {
     return {
-      arrowR: () =>
-        `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z"/><path fill="none" d="M0 0h24v24H0z"/></svg>`,
-      arrowL: () =>
-        `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11.67 3.87L9.9 2.1 0 12l9.9 9.9 1.77-1.77L3.54 12z"/><path fill="none" d="M0 0h24v24H0z"/></svg>`
+      peopleIcon,
+      vkIcon,
+      angleRight,
+      angleLeft
     };
   },
   created() {}
