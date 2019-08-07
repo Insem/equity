@@ -5,9 +5,9 @@
     <router-view />
   </div>
 </template>
-<style>
+<!--<style>
 @import "./assets/css/main/main-lg.css";
-</style>
+</style>-->
 <script>
 import appHeader from "./components/header";
 export default {
