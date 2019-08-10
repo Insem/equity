@@ -3,6 +3,7 @@
     <app-header></app-header>
     <!--<router-link to="/about">About</router-link>-->
     <router-view />
+    <app-footer></app-footer>
   </div>
 </template>
 <!--<style>
@@ -10,10 +11,12 @@
 </style>-->
 <script>
 import appHeader from "./components/header";
+import appFooter from "./components/footer";
 export default {
   name: "App",
   components: {
-    appHeader
+    appHeader,
+    appFooter
   },
   data() {
     return {

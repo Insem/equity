@@ -103,6 +103,7 @@
   justify-content: center;
   height: 180px;
   min-width: 180px;
+  max-width: 180px;
   border: 1px solid white;
   border-radius: 100px;
 }
