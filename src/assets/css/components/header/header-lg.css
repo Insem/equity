@@ -1,13 +1,13 @@
 .header_main {
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     background-color: #1A65AE;
     height: 70px;
 }
 
 header .logo {
     height: 100%;
-    width: 380px;
+    background: linear-gradient(45deg, white, #1A65AE);
 }
 
 header .nav {
@@ -31,7 +31,6 @@ header .nav a:last-child {
 }
 
 header .login {
-    margin-left: auto;
     justify-content: center;
     display: flex;
     align-items: center;

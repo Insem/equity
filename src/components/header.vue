@@ -2,7 +2,7 @@
   <header>
     <div class="blue_line"></div>
     <div class="header_main">
-      <div class="logo"></div>
+      <div class="logo" v-html="logo"></div>
       <div class="nav">
         <router-link to="#">Ищущим работу</router-link>
         <router-link to="#">Работодателям</router-link>
@@ -23,5 +23,14 @@
 <style src="../assets/css/components/header/header-lg.css">
 </style>
 <script>
-export default {};
+import logo from "../assets/img/svg/logo.svg";
+export default {
+  components: {},
+  data() {
+    return {
+      logo
+    };
+  },
+  created() {}
+};
 </script>

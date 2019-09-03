@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div class="index_content">
     <div class="body">
       <div class="background"></div>
       <div class="background_content">

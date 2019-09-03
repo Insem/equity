@@ -10,46 +10,77 @@
           :navigationNextLabel="angleRight"
         >
           <slide>
-            <div class="slider_block">
-              <div v-html="peopleIcon" class="slider_image">
+            <router-link to="#" class="slider_block">
+              <div class="slider_image">
+                <font-awesome-icon icon="user-plus" />
               </div>
               <div class="slider_text">
-                <div class="slider_title">Заголовок преимущества</div>
-                <div>
-                  Текст преимущества текст текст текст
-                  еще текст текст текст текст
-                  раз два три
-                </div>
+                <div class="slider_title">Создайте профиль</div>
+                <div>Пройдите процедуру регистрации и дождитесь письма об активации вашего аккаунта.</div>
               </div>
-            </div>
+            </router-link>
           </slide>
           <slide>
-            <div class="slider_block">
-              <div v-html="vkIcon" class="slider_image">
+            <router-link to="#" class="slider_block">
+              <div class="slider_image">
+                <font-awesome-icon icon="id-card" />
               </div>
               <div class="slider_text">
-                <div class="slider_title">Заголовок преимущества</div>
-                <div>
-                  Текст преимущества текст текст текст
-                  еще текст текст текст текст
-                  раз два три
-                </div>
+                <div class="slider_title">Заполните профиль</div>
+                <div>Отметьте ваши профессиональные навыки или загрузите резюме</div>
               </div>
-            </div>
+            </router-link>
           </slide>
           <slide>
-            <div class="slider_block">
-              <div v-html="peopleIcon" class="slider_image">
+            <router-link to="#" class="slider_block">
+              <div class="slider_image">
+                <font-awesome-icon icon="list-alt" />
               </div>
               <div class="slider_text">
-                <div class="slider_title">Заголовок преимущества</div>
+                <div class="slider_title">Приступите к работе</div>
+                <div>Найдите работу себе по вкусу среди опубликованных разовых заданий и вакансий</div>
+              </div>
+            </router-link>
+          </slide>
+          <slide>
+            <router-link to="#" class="slider_block">
+              <div class="slider_image">
+                <font-awesome-icon icon="shield-alt" />
+              </div>
+              <div class="slider_text">
+                <div class="slider_title">Репутация превыше всего</div>
                 <div>
-                  Текст преимущества текст текст текст
-                  еще текст текст текст текст
-                  раз два три
+                  Мы выступаем гарантом сделки между сторонами и модератором в любой спорной
+                  ситуации. Интересы работника и работодателя равноценны и будут соблюдены.
                 </div>
               </div>
-            </div>
+            </router-link>
+          </slide>
+          <slide>
+            <router-link to="#" class="slider_block">
+              <div class="slider_image">
+                <font-awesome-icon icon="hands-helping" />
+              </div>
+              <div class="slider_text">
+                <div class="slider_title">Социальная миссия</div>
+                <div>
+                  Пожалуйста, прочитайте, для кого мы создали сервис
+                  “Все за одного” и отнеситесь с пониманием к нашим
+                  требованиям предоставить те или иные подтверждающие документы.
+                </div>
+              </div>
+            </router-link>
+          </slide>
+          <slide>
+            <router-link to="#" class="slider_block">
+              <div class="slider_image">
+                <font-awesome-icon icon="info" />
+              </div>
+              <div class="slider_text">
+                <div class="slider_title">Нужна помощь?</div>
+                <div>Вот, как можно с нами связаться по тем или иным вопросам:</div>
+              </div>
+            </router-link>
           </slide>
         </carousel>
       </div>
@@ -58,18 +89,18 @@
 </template>
 <style>
 @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
-.VueCarousel-navigation button{
+.VueCarousel-navigation button {
   width: 50px;
 }
 .slider {
   background-color: #003061;
   padding: 0 60px;
 }
-.slider button:focus{
-  outline: none!important;
+.slider button:focus {
+  outline: none !important;
 }
-.slider button svg{
-  fill:white!important;
+.slider button svg {
+  fill: white !important;
 }
 .slider_block {
   display: flex;
@@ -81,7 +112,6 @@
 }
 .slider_block .slider_text .slider_title {
   font-size: 30px;
-  text-transform: capitalize;
   margin-top: 20px;
 }
 .slider_block .slider_text {
@@ -113,8 +143,9 @@ label {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.slider_image svg{
-  width: 100%;
+.slider_image svg {
+  width: 70% !important;
+  height: 70% !important;
 }
 </style>
 <script>
@@ -124,7 +155,6 @@ import vkIcon from "../assets/img/svg/vk.svg";
 import angleRight from "../assets/img/svg/angle-right.svg";
 import angleLeft from "../assets/img/svg/angle-left.svg";
 
-console.log(peopleIcon);
 export default {
   components: {
     Carousel,
