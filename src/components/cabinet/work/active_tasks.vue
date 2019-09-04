@@ -15,36 +15,105 @@
           <div class="data_item">1000 руб</div>
           <div class="data_item">20.08.2019</div>
           <div class="data_item">05.09.2019</div>
-          <div class="data_item">
+          <div class="data_item" @click="show=!show">
             <font-awesome-icon icon="plus" />
           </div>
         </div>
-        <div class="data_block">
-          <div class="left">
+        <div class="data_block" v-bind:class="{show:show, un_show:!show}">
+          <div class="left_block">
             <div class="image_block">
-              <div class="star" v-html="emptyStar"></div>
               <img src="img/sloy.png" />
               <div class="text">
                 <div>Компания</div>
                 <div class="company_name">"Рога и Копыта"</div>
               </div>
+              <div class="star" v-html="emptyStar"></div>
             </div>
           </div>
-          <div class="right">
+          <div class="right_block">
             <div class="project_title">Название проекта</div>
-            <div class="project_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-               proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+            <div class="project_desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
             <div class="project_info">
               <div class="project_type">
-                <div class="category">Категория: <span>тесты</span></div>
-                <div class="price">Стоимость:<span>100р</span></div>
+                <div class="category">
+                  Категория:
+                  <span>тесты</span>
+                </div>
+                <div class="price">
+                  Стоимость:
+                  <span>100р</span>
+                </div>
               </div>
               <div class="project_date">
-                <div class="category">Дата начала работы: <span>20.08.2019</span></div>
-                <div class="price">Срок сдачи:<span>05.09.2019</span></div>
+                <div class="category">
+                  Дата начала работы:
+                  <span>20.08.2019</span>
+                </div>
+                <div class="price">
+                  Срок сдачи:
+                  <span>05.09.2019</span>
+                </div>
               </div>
             </div>
           </div>
+          <div class="star" v-html="emptyStar"></div>
+        </div>
+      </div>      
+      <div class="data">
+        <div class="data_list">
+          <div class="data_item">Тексты</div>
+          <div class="data_item">Написать статью</div>
+          <div class="data_item">1000 руб</div>
+          <div class="data_item">20.08.2019</div>
+          <div class="data_item">05.09.2019</div>
+          <div class="data_item" @click="show2=!show2">
+            <font-awesome-icon icon="plus" />
+          </div>
+        </div>
+        <div class="data_block" v-bind:class="{show:show2}">
+          <div class="left_block">
+            <div class="image_block">
+              <img src="img/sloy.png" />
+              <div class="text">
+                <div>Компания</div>
+                <div class="company_name">"Рога и Копыта"</div>
+              </div>
+              <div class="star" v-html="emptyStar"></div>
+            </div>
+          </div>
+          <div class="right_block">
+            <div class="project_title">Название проекта</div>
+            <div class="project_desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+            <div class="project_info">
+              <div class="project_type">
+                <div class="category">
+                  Категория:
+                  <span>тесты</span>
+                </div>
+                <div class="price">
+                  Стоимость:
+                  <span>100р</span>
+                </div>
+              </div>
+              <div class="project_date">
+                <div class="category">
+                  Дата начала работы:
+                  <span>20.08.2019</span>
+                </div>
+                <div class="price">
+                  Срок сдачи:
+                  <span>05.09.2019</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="star" v-html="emptyStar"></div>
         </div>
       </div>
     </div>
@@ -61,10 +130,14 @@
   padding-right: 16px;
   margin-bottom: 20px;
 }
+.work .title_list div:first-child {
+  width: 10% !important;
+  text-align: left;
+}
 .work .title_list div {
   font-weight: 600;
   font-size: 14px;
-  width: 20%;
+  width: 22.5%;
   text-align: center;
 }
 
@@ -77,27 +150,81 @@
 
 .work .user_data .data .data_list .data_item {
   text-align: center;
-  width: calc(20% - 4px);
+  width: calc(22.5% - 3.2px);
+}
+.work .user_data .data .data_list .data_item:first-child {
+  width: calc(10% - 3.2px);
+  text-align: left;
 }
 .work .user_data .data .data_list .data_item:last-child {
   width: 16px;
 }
-.work .user_data .data .data_block .left {
+.work .user_data .data .data_block .left_block {
   width: 115px;
-  padding-right: 20px;
+  padding-right: 0px !important;
 }
-.work .user_data .data .data_block{
+.work .user_data .data .data_block {
   display: flex;
   flex-direction: row;
-  margin-top:10px;
+  visibility: hidden;
+  margin-top: 10px;
+  max-height:0px;
+  overflow: hidden;
+  /*padding-bottom: 10px;*/
+  
+  
 }
-.work .user_data .data .data_block .right .project_info {
+.show {
+  animation: show 1s;
+  max-height: 200px!important;
+  visibility: visible!important;
+  border-bottom:1px solid rgba(228, 228, 228, 1);
+}
+.un_show{
+  animation: un_show 1s;
+}
+
+@keyframes show {
+  from {
+    visibility: visible;
+    max-height:0px;
+  }
+  to {
+    max-height: 200px;
+  }
+}
+@keyframes un_show {
+  from {
+    max-height:200px;
+    border-width:1px;
+    visibility: visible;
+  }
+  to {
+    
+    border-width:0px;
+    visibility: hidden;
+    max-height: 0px;
+  }
+}
+.work .user_data .data .data_block .right_block .project_info {
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   justify-content: space-between;
+  margin-top: 30px;
+  font-weight: 600;
 }
-.work .user_data .data .data_block .right {
-  width:calc(100% - 115px + 20px);
+.work .user_data .data .data_block .right_block .project_desc {
+  font-style: italic;
+  font-size: 16px;
+}
+.work .user_data .data .data_block .right_block .project_title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.work .user_data .data .data_block .right_block {
+  width: calc(100% - 115px);
+  padding-left: 20px;
 }
 .work .user_data .data .data_block .image_block {
   position: relative;
@@ -109,7 +236,7 @@
 }
 .work .user_data .data .data_block .image_block img {
   border-radius: 50px;
-  width: 100%;
+  width: 115px;
   margin-bottom: 10px;
 }
 .work .user_data .data .data_block .image_block .star {
@@ -119,8 +246,8 @@
   right: 5px;
   top: 8px;
 }
-.work .user_data .data .data_block .image_block .star svg {
-  width: 100% !important;
+.work .user_data .data .data_block > .star svg {
+  width: 16px !important;
 }
 </style>
 <script>
@@ -128,7 +255,9 @@ import emptyStar from "../../../assets/img/svg/empty-star.svg";
 export default {
   data() {
     return {
-      emptyStar
+      emptyStar,
+      show:false,
+      show2:false
     };
   }
 };
