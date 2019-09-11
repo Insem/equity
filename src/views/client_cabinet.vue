@@ -37,7 +37,7 @@
         <div class="horizontal_main_menu">
           <div
             v-for="(item, i) in main_menu_arr"
-            @click="active(i,main_menu_arr)"
+            @click="active_main(i,main_menu_arr)"
             class="menu_item"
             v-bind:class="{active:item.active}"
           >{{item.val}}</div>
@@ -57,8 +57,7 @@
     </div>
   </div>
 </template>
-<style>
-@import "../assets/css/views/client_cabinet/client_cabinet-lg.css";
+<style scoped src="../assets/css/views/client_cabinet/client_cabinet-lg.css">
 </style>
 <script>
 import prof_def from "../assets/img/svg/profile_default.svg";
@@ -89,6 +88,10 @@ export default {
         return "Добрый вечер";
       }
     },
+    active_main(index, arr){
+      this.active(index, arr);
+      this.active_sub(0,this.sub_menu_arr);
+    },
     active(index, arr) {
       let self = this;
       arr.forEach(function(item, i, array) {
@@ -110,7 +113,12 @@ export default {
       //this.$mount.bind(arr[index].component,'#horizontal_contnent');
       (new (Vue.extend(arr[index].component))).$mount('#horizontal_contnent div', false);
       
+      return '';
     }
+  },
+  mounted(){
+    console.log('mounted', this.sub_menu_arr);
+    this.active_sub(0,this.sub_menu_arr)
   },
   components: {
     about_me,

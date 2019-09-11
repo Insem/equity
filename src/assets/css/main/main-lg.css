@@ -6,3 +6,13 @@
     color:white;
     text-decoration: none;
   }
+  
+.btn{
+  color: white;
+  background-color: #1a65ae;
+  cursor: pointer;
+  border: none;
+}
+.btn:focus {
+  outline: none !important;
+}

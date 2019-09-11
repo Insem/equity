@@ -20,7 +20,7 @@
     </div>
   </header>
 </template>
-<style src="../assets/css/components/header/header-lg.css">
+<style scoped src="../assets/css/components/header/header-lg.css">
 </style>
 <script>
 import logo from "../assets/img/svg/logo.svg";

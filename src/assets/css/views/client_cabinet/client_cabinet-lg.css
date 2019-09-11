@@ -41,9 +41,6 @@
     line-height: 20px;
 }
 
-.cabinet_main .content .right .btn:focus {
-    outline: none !important;
-}
 
 .cabinet_main .content .right .btn svg {
     margin-right: 5px;
@@ -53,11 +50,7 @@
     height: 50px;
     width: 100%;
     margin-top: 15px;
-    background-color: #1a65ae;
-    color: white;
     font-size: 18px;
-    cursor: pointer;
-    border: none;
 }
 
 .cabinet_main .content .right {

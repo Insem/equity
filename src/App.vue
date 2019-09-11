@@ -6,9 +6,8 @@
     <app-footer></app-footer>
   </div>
 </template>
-<!--<style>
-@import "./assets/css/main/main-lg.css";
-</style>-->
+<style src="./assets/css/main/main-lg.css">
+</style>
 <script>
 import appHeader from "./components/header";
 import appFooter from "./components/footer";

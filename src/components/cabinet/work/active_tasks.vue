@@ -15,11 +15,11 @@
           <div class="data_item">1000 руб</div>
           <div class="data_item">20.08.2019</div>
           <div class="data_item">05.09.2019</div>
-          <div class="data_item" @click="show=!show">
+          <div class="data_item" @click="animate">
             <font-awesome-icon icon="plus" />
           </div>
         </div>
-        <div class="data_block" v-bind:class="{show:show, un_show:!show}">
+        <div class="data_block" v-bind:class="animCss">
           <div class="left_block">
             <div class="image_block">
               <img src="img/sloy.png" />
@@ -61,7 +61,7 @@
           </div>
           <div class="star" v-html="emptyStar"></div>
         </div>
-      </div>      
+      </div>
       <div class="data">
         <div class="data_list">
           <div class="data_item">Тексты</div>
@@ -69,11 +69,11 @@
           <div class="data_item">1000 руб</div>
           <div class="data_item">20.08.2019</div>
           <div class="data_item">05.09.2019</div>
-          <div class="data_item" @click="show2=!show2">
+          <div class="data_item" >
             <font-awesome-icon icon="plus" />
           </div>
         </div>
-        <div class="data_block" v-bind:class="{show:show2}">
+        <div class="data_block" >
           <div class="left_block">
             <div class="image_block">
               <img src="img/sloy.png" />
@@ -119,136 +119,7 @@
     </div>
   </div>
 </template>
-<style>
-.work {
-  margin-top: 30px;
-}
-.work .title_list {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  padding-right: 16px;
-  margin-bottom: 20px;
-}
-.work .title_list div:first-child {
-  width: 10% !important;
-  text-align: left;
-}
-.work .title_list div {
-  font-weight: 600;
-  font-size: 14px;
-  width: 22.5%;
-  text-align: center;
-}
-
-.work .user_data .data .data_list {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  border-bottom: 1px solid #e4e4e4;
-}
-
-.work .user_data .data .data_list .data_item {
-  text-align: center;
-  width: calc(22.5% - 3.2px);
-}
-.work .user_data .data .data_list .data_item:first-child {
-  width: calc(10% - 3.2px);
-  text-align: left;
-}
-.work .user_data .data .data_list .data_item:last-child {
-  width: 16px;
-}
-.work .user_data .data .data_block .left_block {
-  width: 115px;
-  padding-right: 0px !important;
-}
-.work .user_data .data .data_block {
-  display: flex;
-  flex-direction: row;
-  visibility: hidden;
-  margin-top: 10px;
-  max-height:0px;
-  overflow: hidden;
-  /*padding-bottom: 10px;*/
-  
-  
-}
-.show {
-  animation: show 1s;
-  max-height: 200px!important;
-  visibility: visible!important;
-  border-bottom:1px solid rgba(228, 228, 228, 1);
-}
-.un_show{
-  animation: un_show 1s;
-}
-
-@keyframes show {
-  from {
-    visibility: visible;
-    max-height:0px;
-  }
-  to {
-    max-height: 200px;
-  }
-}
-@keyframes un_show {
-  from {
-    max-height:200px;
-    border-width:1px;
-    visibility: visible;
-  }
-  to {
-    
-    border-width:0px;
-    visibility: hidden;
-    max-height: 0px;
-  }
-}
-.work .user_data .data .data_block .right_block .project_info {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 30px;
-  font-weight: 600;
-}
-.work .user_data .data .data_block .right_block .project_desc {
-  font-style: italic;
-  font-size: 16px;
-}
-.work .user_data .data .data_block .right_block .project_title {
-  font-size: 16px;
-  font-weight: 700;
-  margin-bottom: 5px;
-}
-.work .user_data .data .data_block .right_block {
-  width: calc(100% - 115px);
-  padding-left: 20px;
-}
-.work .user_data .data .data_block .image_block {
-  position: relative;
-}
-.work .user_data .data .data_block .image_block div {
-  font-weight: 600;
-  font-size: 14px;
-  text-align: center;
-}
-.work .user_data .data .data_block .image_block img {
-  border-radius: 50px;
-  width: 115px;
-  margin-bottom: 10px;
-}
-.work .user_data .data .data_block .image_block .star {
-  width: 25px;
-  display: inline-block;
-  position: absolute;
-  right: 5px;
-  top: 8px;
-}
-.work .user_data .data .data_block > .star svg {
-  width: 16px !important;
-}
+<style scoped src="./css/active_tasks.css">
 </style>
 <script>
 import emptyStar from "../../../assets/img/svg/empty-star.svg";
@@ -256,9 +127,18 @@ export default {
   data() {
     return {
       emptyStar,
-      show:false,
-      show2:false
+      show: false,
+      animCss:{}
     };
+  },
+  mounted(){
+  },
+  methods:{
+    animate(){
+      let data = this.$data;
+      data.show = !data.show;
+      data.animCss = {show:data.show, un_show:!data.show};
+    }
   }
 };
 </script>

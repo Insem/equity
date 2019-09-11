@@ -43,7 +43,7 @@
     <div class="footer_copuright">© 2019 «Все за одного»</div>
   </footer>
 </template>
-<style>
+<style scoped>
 footer .footer_copuright {
   font-size: 16px;
   font-weight: 400;

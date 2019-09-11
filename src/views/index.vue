@@ -14,7 +14,7 @@
         <div class="bottom_text">
           <span>
             Мы твёрдо убеждены, что никакие жизненные обстоятельства не должны
-            стать преградой бла-бла-бла
+            стать преградой
           </span>
 
           <!--<a class="bottom_link" href="#">(подробнее о нашей миссии)</a>-->
@@ -27,8 +27,7 @@
     <div style="height:20px;background-color:#002132;width:100%" ></div>
   </div>
 </template>
-<style>
-@import "../assets/css/views/index/index-lg.css";
+<style scoped src="../assets/css/views/index/index-lg.css">
 </style>
 <script>
 import slider from "../components/slider";

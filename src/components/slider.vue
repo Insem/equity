@@ -87,7 +87,7 @@
     </div>
   </div>
 </template>
-<style>
+<style scoped>
 @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 .VueCarousel-navigation button {
   width: 50px;
