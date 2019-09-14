@@ -1,0 +1,64 @@
+.open_tasks {
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+}
+
+.up{
+    display: flex;
+    flex-direction: column;
+}
+
+.task_card {
+    width: 170px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-right: 10px;
+    font-size: 14px;
+    padding: 10px 10px;
+    box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.15);
+
+}
+
+.blog_img img {
+    width: 100%;
+}
+
+.category,
+.desc {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+.desc
+
+.name {
+    margin-bottom: 5px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.price,
+.date {
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.price span,
+.date span {
+    font-weight: 500;
+
+}
+
+.executor {
+    color: #6B9A62;
+    font-size: 14px;
+    text-align: center;
+    margin-top:5px;
+}

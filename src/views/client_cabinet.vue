@@ -72,7 +72,9 @@ import balance from "../components/cabinet/balance/balance";
 import active_tasks  from "../components/cabinet/work/active_tasks";
 import completed_tasks from "../components/cabinet/work/completed_tasks";
 import calendar  from "../components/cabinet/work/calendar";
-import bookmarks  from "../components/cabinet/bookmarks/bookmarks";
+import blog_posts  from "../components/cabinet/bookmarks/blog_posts";
+import open_tasks  from "../components/cabinet/bookmarks/open_tasks";
+import profile  from "../components/cabinet/bookmarks/profile";
 import Vue from 'vue';
 export default {
   methods: {
@@ -204,9 +206,19 @@ export default {
           active: false,
           sub_menu: [
             {
-              val: "Закладки",
+              val: "Профили работодателей",
               active: true,
-              component:bookmarks
+              component:profile
+            },
+            {
+              val: "Открытые задачи",
+              active: true,
+              component:open_tasks
+            },
+            {
+              val: "Записи в блоге",
+              active: true,
+              component:blog_posts
             }
           ]
         }
